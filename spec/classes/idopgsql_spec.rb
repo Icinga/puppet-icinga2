@@ -25,14 +25,14 @@ describe('icinga2::feature::idopgsql', type: :class) do
         let(:icinga2_conf_dir) { '/usr/local/etc/icinga2' }
         let(:icinga2_pki_dir) { '/var/lib/icinga2/certs' }
         let(:ido_pgsql_schema_dir) { '/usr/local/share/icinga2-ido-pgsql/schema' }
-        let(:icinga2_sslkey_mode) { '0400' }
+        let(:icinga2_sslkey_mode) { '0440' }
         let(:icinga2_user) { 'icinga' }
         let(:icinga2_group) { 'icinga' }
       else
         let(:icinga2_conf_dir) { '/etc/icinga2' }
         let(:icinga2_pki_dir) { '/var/lib/icinga2/certs' }
         let(:ido_pgsql_schema_dir) { '/usr/share/icinga2-ido-pgsql/schema' }
-        let(:icinga2_sslkey_mode) { '0400' }
+        let(:icinga2_sslkey_mode) { '0440' }
         case facts[:os]['family']
         when 'Debian'
           let(:icinga2_user) { 'nagios' }
